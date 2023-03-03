@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ambilwarna_dialogView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/views_container_parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp" >
+        <com.example.android_practice_b.color_picker.ColorShaderBox
+            android:id="@+id/color_shader_box"
+            android:layout_width="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/color_pallete_bar"
+            android:layout_height="200dp"
+            android:layout_marginEnd="8dp"
+            android:layerType="software"
+            tools:ignore="MissingClass" />
+        <ImageView
+            android:id="@+id/ambilwarna_target1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/thumb" />
+        <ImageView
+            android:id="@+id/ambilwarna_target2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/thumb" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/color_pallete_bar"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitXY"
+            app:roundPercent="0.9"
+            android:src="@drawable/ambilwarna_hue" />
+        <ImageView
+            android:id="@+id/ambilwarna_cursor"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/thumb" />
+
+
+      <!--  <TextView
+            android:id="@+id/hexCode"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_toStartOf="@+id/selectedColorView"
+            android:layout_below="@id/ambilwarna_viewSatBri"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:maxWidth="90dp"
+            android:textSize="11dp"
+            android:gravity="center" />-->
+
+
+
+        <com.mikhaellopez.gradientview.GradientView
+            android:id="@+id/gradientView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            app:gv_direction="left_to_right"
+            android:layout_below="@id/color_shader_box"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
